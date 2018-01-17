@@ -133,7 +133,7 @@ if __name__ == "__main__":
     if args.all_addresses:
         bind_host='0.0.0.0'
     else:
-        bind_host='127.0.0.1'
+        bind_host='pseworkflow.scc.kit.edu'
 
     if args.daemon:
         pid = None
