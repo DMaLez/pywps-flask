@@ -20,5 +20,5 @@ class Addition(Process):
         )
 
     def handler(self, request, response):
-        response.outputs['response'].data = 'Result' + str(request.inputs['first_arg'][0].data + request.inputs['second_arg'][0].data)
+        response.outputs['response'].data = request.inputs['first_arg'][0].data + request.inputs['second_arg'][0].data
         return response
