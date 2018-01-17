@@ -38,6 +38,7 @@ from processes.bboxinout import Box
 from processes.jsonprocess import TestJson
 from processes.add import Addition
 from processes.divide import Division
+from processes.square import Square
 
 app = flask.Flask(__name__)
 
@@ -52,7 +53,8 @@ processes = [
     Box(),
     TestJson(),
     Addition(),
-    Division()
+    Division(),
+    Square(),
 ]
 
 # For the process list on the home page
