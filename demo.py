@@ -133,7 +133,7 @@ if __name__ == "__main__":
     if args.all_addresses:
         bind_host='0.0.0.0'
     else:
-        bind_host='pseworkflow.scc.kit.edu'
+        bind_host='denskiy.pythonanywhere.com'
 
     if args.daemon:
         pid = None
