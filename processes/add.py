@@ -3,15 +3,15 @@ from pywps import Process, LiteralInput, LiteralOutput
 
 class Addition(Process):
     def __init__(self):
-        inputs = [LiteralInput('first_arg', 'first Input', data_type='integer'),
-                  LiteralInput('second_arg', 'second Input', data_type='integer')]
-        outputs = [LiteralOutput('response', 'Output response', data_type='integer')]
+        inputs = [LiteralInput(identifier='first_arg', title='first Input', data_type='integer', abstract="Erster Summand"),
+                  LiteralInput(identifier='second_arg', title='second Input', data_type='integer', abstract="Zweiter summand")]
+        outputs = [LiteralOutput(identifier='response', title='Output response', data_type='integer', abstract="Summe")]
 
         super(Addition, self).__init__(
             self.handler,
             identifier='addition',
             title='Addition Process',
-            abstract='Addiert zwei Input Zahlen (integers)',
+            abstract='Addiert zwei eingegebene ganze Zahlen (integers)',
             version='1.0.0',
             inputs=inputs,
             outputs=outputs,
