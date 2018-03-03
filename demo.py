@@ -37,25 +37,23 @@ from processes.area import Area
 from processes.bboxinout import Box
 from processes.jsonprocess import TestJson
 from processes.add import Addition
+from processes.sub import Substraction
+from processes.mult import Multiplication
 from processes.divide import Division
 from processes.square import Square
+from processes.fac import Factorial
 from processes.inc import Increment
 
 app = flask.Flask(__name__)
 
 processes = [
-    FeatureCount(),
     SayHello(),
-    Centroids(),
-    UltimateQuestion(),
-    Sleep(),
-    Buffer(),
-    Area(),
-    Box(),
-    TestJson(),
     Addition(),
+    Substraction(),
+    Multiplication(),
     Division(),
     Square(),
+    Factorial(),
     Increment()
 ]
 

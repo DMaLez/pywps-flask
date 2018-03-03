@@ -3,8 +3,8 @@ from pywps import Process, LiteralInput, LiteralOutput
 
 class Square(Process):
     def __init__(self):
-        inputs = [LiteralInput('arg', 'Input number', data_type='integer')]
-        outputs = [LiteralOutput('response', 'Output response', data_type='integer')]
+        inputs = [LiteralInput(identifier='arg', title='Input number', data_type='integer', abstract="Argument")]
+        outputs = [LiteralOutput(identifier='response', title='Output response', data_type='integer', abstract="Result")]
 
         super(Square, self).__init__(
             self.handler,
