@@ -5,14 +5,13 @@ class Division(Process):
     def __init__(self):
         inputs = [LiteralInput('dividend', 'First Input: Dividend', data_type='integer'),
                   LiteralInput('divisor', 'Second Input: Divisor', data_type='integer')]
-        outputs = [LiteralOutput('quotient', 'First Output: Quotient', data_type='integer'),
-                   LiteralOutput('rest', 'Second Output: Rest', data_type='integer')]
+        outputs = [LiteralOutput('quotient', 'First Output: Quotient', data_type='integer')]
 
         super(Division, self).__init__(
             self.handler,
             identifier='division',
             title='Division Process',
-            abstract='Dividiert zwei Zahlen. Liefert sowohl den Quotient, als auch den Rest der Division',
+            abstract='Dividiert zwei ganze Zahlen',
             version='1.0.0',
             inputs=inputs,
             outputs=outputs,
@@ -22,5 +21,4 @@ class Division(Process):
 
     def handler(self, request, response):
         response.outputs['quotient'].data = request.inputs['dividend'][0].data // request.inputs['divisor'][0].data
-        response.outputs['rest'].data = request.inputs['dividend'][0].data % request.inputs['divisor'][0].data
         return response
